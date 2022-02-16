@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "gift_analyzer"
+version = "0.1.0"
+description = ""
+authors = ["German Gritsenko <gerfest.gricenko@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+djangorestframework = "^3.13.1"
+django-filter = "^21.1"
+drf-yasg = "^1.20.0"
+python-decouple = "^3.5"
+psycopg2-binary = "^2.9.3"
+Django = "^4.0.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

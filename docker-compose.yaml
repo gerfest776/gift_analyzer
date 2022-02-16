@@ -18,6 +18,7 @@ x-settings: &global
 services:
   api:
     container_name: api
+    command: python manage.py runserver
     build:
       context: .
       dockerfile: Dockerfile

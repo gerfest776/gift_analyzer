@@ -1,13 +1,16 @@
 FROM python:3.9-slim-buster
-#RUN apk update && apk add gcc libc-dev make git libffi-dev openssl-dev python3-dev libxml2-dev libxslt-dev
 
 WORKDIR /app
 COPY poetry.lock pyproject.toml /app/
 
-RUN pip3 install poetry
-RUN poetry install
+RUN apt install -y netcat-openbsd && pip install --upgrade pip poetry \
+    && poetry config virtualenvs.create false \
+    && poetry install --no-dev \
+    && rm -rf /root/.cache/pip
 
 COPY . /app
 WORKDIR /app
 
-CMD ["poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:8080"]
+RUN chmod +x ./entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]

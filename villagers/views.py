@@ -63,3 +63,4 @@ class CreateVillagerView(CreateModelMixin, RetrieveModelMixin,
             url_path='towns/stat/percentile/age', url_name='citizens-percentile')
     def towns(self, request, import_id):
         return self.retrieve(request)
+    

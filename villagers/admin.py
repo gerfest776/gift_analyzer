@@ -1,7 +1,8 @@
 from django.contrib import admin
 
+from villagers.models import Villager
+
 # Register your models here.
 
-from villagers.models import Villager
 
 admin.site.register(Villager)

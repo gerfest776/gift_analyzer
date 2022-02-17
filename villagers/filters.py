@@ -12,9 +12,9 @@ class VillagersFilter(rest_framework.FilterSet):
         town - field which sorts by citizen_towns(town = <UUID>)
 
     """
-    order_by = django_filters.OrderingFilter(fields=['birth_date'])
+
+    order_by = django_filters.OrderingFilter(fields=["birth_date"])
 
     class Meta:
         model = Villager
-        fields = ['town']
-
+        fields = ["town"]

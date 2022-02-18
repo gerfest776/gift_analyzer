@@ -19,6 +19,12 @@
 	docker-compose build
 	docker-compose up
 
+### <a name="launch-app"></a> Запуск тестов
+
+Находясь в ` /gift_analyzer ` выполнить в терминале:
+
+	python manage.py test
+
 ## <a name="handlers"></a> Реализация REST API
 
 ### <a name="post-import"></a> 1: POST /imports

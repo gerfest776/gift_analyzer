@@ -66,7 +66,7 @@ class CreateVillagerView(
     @action(
         methods=["get"],
         detail=False,
-        url_path="citizens/(?P<import_id>[^/.]+)",
+            url_path="citizens/(?P<import_id>[^/.]+)",
         url_name="citizens",
     )
     def citizens(self, request, import_id):
